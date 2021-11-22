@@ -11,34 +11,45 @@
 <body>
     <section class="navigation">                                <!-- navigation -->
         <div class="logo">
-            <img src="/assets/Instincthub logo.png" alt="instinct hub logo">
+            <img src="assets/Instincthub logo.png" alt="instinct hub logo">
         </div>
         <div class="menu">
             <ul>
                 <li>
-                    <img src="/assets/bx_bxs-dashboard.png" alt="dashboard-logo">
-                    overview
+                    <div class="item">
+                      <img src="assets/bx_bxs-dashboard.png" alt="dashboard-logo">
+                     <p>overview</p> 
+                   </div>
+                   
                 </li>
                 <li>
-                    <img src="/assets/akar-icons_file.png" alt="file-icon">
-                    classes
+                    <div class="item">
+                      <img src="assets/akar-icons_file.png" alt="file-icon">
+                      <p> classes </p>
+                    </div>
                 </li>
                 <li>
-                    <img src="/assets/codicon_graph.png" alt="gragh-icon">
-                    analytics
+                    <div class="item">
+                     <img src="assets/codicon_graph.png" alt="gragh-icon">
+                     <p>analytics</p>
+                    </div>
                 </li>
                 <li>
-                    <img src="/assets/ic_baseline-group.png" alt="group-icon">
-                    community
+                    <div class="item">
+                      <img src="assets/ic_baseline-group.png" alt="group-icon">
+                     <p> community </p>
+                    </div>
                 </li>
                 <li>
-                    <img src="/assets/fe_logout.png" alt="logout-icon">
-                    logout
+                    <div class="item">
+                     <img src="assets/fe_logout.png" alt="logout-icon">
+                     <p>logout</p>
+                    </div>
                 </li>
             </ul>
         </div>
         <div class="upgrade">
-            <img src="/assets/Upgrade illustration.png/" alt="Upgrade illustration">
+            <img src="assets/Upgrade illustration.png" alt="Upgrade illustration">
             <p>Upgrade your student portal account</p>
             <button class="upgrade-button">Upgrade</button>
         </div>
@@ -46,39 +57,145 @@
     </section>                                               <!-- navigation end -->
 
 
+  <div class="main">
+     <section class="title">                                                <!--title-->
+         <nav>
+             <h1>My course dashboard</h1>
+             <div class="search">
+                 <input action="text" placeholder="you are looking for.."></input>
+                 <img src="assets/bx_bx-search.png" alt="search">
+                 <img src="assets/codicon_bell-dot.png" alt="bell">
+                 <img src="assets/User profile.png" alt="profile photo">
+             </div>
+          </nav>
+      </section>                                                       <!-- title end -->
 
- <section class="title">                                                <!--title-->
-    <nav>
-     <h1>My course dashboard</h1>
-      <div class="search">
-         <input action="text" placeholder="you are looking for.."></input>
-         <img src="/assets/bx_bx-search.png" alt="search">
-         <img src="/assets/codicon_bell-dot.png" alt="bell">
-         <img src="/assets/User profile.png" alt="profile photo">
-      </div>
-  </nav>
- </section>                                                       <!-- title end -->
 
 
+     <section class="statistics">                                    <!-- statistics -->
+         <div class="doughnut-box">
+             <div class="glaze">
+                 <div class="doughnut">
+                     <canvas id="daily" width="400" height="400"></canvas>
+                 </div>
 
- <section class="doughnut-box">                                    <!-- statistics -->
-    <div class="glaze">
-        <div class="doughnut">
-           <canvas id="myChart" width="400" height="400"></canvas>
-        </div>
-        <h1 class="70">70%</h1>
-        <p>Daily <br> <div>activities</div></p>
-    </div>
+                 <h1 class="70">70%</h1>
+                 <div class="time">
+                     <p>Daily <br> <div>activities</div></p>
+                 </div>
+             </div>
+
+             <div class="glaze">
+                  <div class="doughnut">
+                     <canvas id="weekly" width="400" height="400"></canvas>
+                  </div>
+
+                 <h1 class="20">20%</h1>
+                 <div class="time">
+                     <p>weekly <br> <div>activities</div></p>
+                 </div>  
+             </div>
+
+             <div class="glaze">
+                  <div class="doughnut">
+                     <canvas id="yearly" width="400" height="400"></canvas>
+                 </div>
+
+                 <h1 class="12">12%</h1>
+                 <div class="time">
+                      <p>yearly <br> <div>activities</div></p>
+                 </div>     
+              </div>
+         </div>
+
+         <div class="table">
+             <table>
+                 <tr>
+                  <th>No</th>
+                  <th>Course Name</th>
+                  <th>Department</th>
+                  <th>Units</th>
+                  <th>GPA</th>
+                 </tr>
+                 <tr>
+                   <td>0</td>
+                   <td>Tax Academy Introduction</td>
+                   <td>finances</td>
+                   <td>3</td>
+                   <td>4.3/5</td>
+                 </tr>
+                 <tr>
+                   <td>1</td>
+                   <td>Transfer Pricing</td>
+                   <td>Costomer Service</td>
+                   <td>3</td>
+                   <td>4.3/5</td>
+                 </tr>
+                 <tr>
+                   <td>2</td>
+                   <td>Tax Academy for beginners</td>
+                   <td>Purchases</td>
+                   <td>3</td>
+                   <td>4.3/5</td>
+                 </tr>
+                 <tr>
+                   <td>3</td>
+                   <td>New Business</td>
+                   <td>Finances</td>
+                   <td>3</td>
+                   <td>3.0/5</td>
+                 </tr>
+                 <tr>
+                   <td>4</td>
+                   <td>Tax Accounting</td>
+                   <td>Administration</td>
+                   <td>8</td>
+                   <td>4.7/5</td>
+                 </tr>
+                 <tr>
+                   <td>5</td>
+                   <td>Motion Design</td>
+                   <td>It Dept</td>
+                   <td>6</td>
+                   <td>4.4/5</td>
+                 </tr>
+                 <tr>
+                   <td>6</td>
+                   <td>3D Modeling</td>
+                   <td>It Dept</td>
+                   <td>3</td>
+                   <td>3.0/5</td>
+                 </tr>
+                 <tr>
+                   <td>7</td>
+                   <td>Brand strategy on Instagram</td>
+                   <td>Marketing</td>
+                   <td>3</td>
+                   <td>4.7/5</td>
+                 </tr>
+             </table>
+         </div>
     
- </section>                                                   <!-- statistics end -->
+      </section>                                                   <!-- statistics end -->
 
 
 
- <section class="advert">                                              <!--advert-->
+     <section class="advert">                                              <!--advert-->
+         <div class="text">
+             <h1>when nothing goes right,go left</h1>
+             <p>Build your skills wth courses and degrees online from anywhere with profesional instructors</p>
+             <button>learn more</button>
+         </div>
+         <div class="image">
+            <img src="assets/female image.png" alt="female image">
+         </div>
 
- </section>                                                     <!-- advert end -->
+      </section>                                                     <!-- advert end -->
+  </div>
 
-
+ <script src="daily.js"></script>
+ <script src="weekly.js"></script>
+ <script src="yearly.js"></script>
 
 
 </body>
