@@ -7,8 +7,8 @@ const daily = new Chart(ctx, {
             label: '# of Votes',
             data: [71, 29],
             backgroundColor: [
-                'rgba(255, 99, 132)',
-                'rgba(54, 162, 235)',
+                '#1ea896',
+                '#af3e4d',
             ],
             
             borderWidth: 1
