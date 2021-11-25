@@ -4,6 +4,7 @@
 body{
     margin: 0;
     background-color: #F4F7F5;
+    font-family: 'Rubik', sans-serif;
 }
 /*  =====================================
  Navigation 
@@ -16,6 +17,9 @@ body{
     z-index: 10;
     /* position: 0, 1049.200, 0, 0 ; */
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .navigation .logo{
     padding: 20px;
@@ -47,22 +51,31 @@ body{
  .navigation .upgrade {
     height: 35vh;
     width: 90%;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
     padding-left: 25px;
+    margin-left: 15px;
     border-radius: 5px;
     background-color: #F4F7F5;
     justify-content: center;
  }
  .navigation .upgrade p{
-   margin-block: 0;
+    margin-block: 0;
+    position: relative;
+    align-content: center;
+    padding-right: 20px;
  }
  .navigation .upgrade button{
    height: 40px;
-   width: 100px;
+   width: 200px;
    background-color: #2a9d8f;
    border: 0px;
    box-shadow: 0px;
    border-radius: 10px;
+   box-shadow: inset 0 0 0 0 #af3e4d;
+   transition: ease-out 0.3s;
+ }
+ .navigation .upgrade .upgrade-button:hover{
+    box-shadow: inset 200px 0 0 0 #af3e4d;
  }
 .navigation .upgrade .upgrade-button button :hover{
     color: #fff;
@@ -84,16 +97,29 @@ body{
     background-color: #fff;
     justify-content: space-between;
     padding-left: 3%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .main .title nav h1{
     font-weight: 700;
-    font-size: x-large;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main .title nav .search{
+    width: 45%;
+}
+.main .title nav .search img{
+    padding: 10px 20px 0px 10px;
 }
 .main .title nav .search input{
-    border-radius: 20px;
+    border-radius: 10px;
     border-color: #F4F7F5; 
-    background-color: -internal-light-dark(none);
-    color: -internal-light-dark(none);
+    padding: 10px 20px 5px 10px;
+    background-color: -internal-light-dark(none) #fff;
+    color: -internal-light-dark(none) #fff;
+    width: 55%;
+    box-shadow: none;
+    margin-bottom: 10px;
 }
 
 
@@ -102,22 +128,119 @@ body{
 .main .doughnut-box{
     display: flex;
     justify-content: space-around;
-    padding: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 10px;
 }
 .main .doughnut-box .glaze{
     display: flex;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 10px;
+    width: 30%;
 }
 .main .doughnut-box .glaze .doughnut {
     height: 135px;
     width: 135px;
 }
-.main .doughnut-box .glaze p {
-    position: relative;
-}
-.main .doughnut-box .glaze p div {
+.main .doughnut-box .glaze .percentage{
     position: absolute;
+    padding: 40px 50px;
+}
+.main .doughnut-box .glaze p{
+    position: relative;
+    margin: 50px 0px 10px 40px;
 }
 
+
+
+
+/* table */
+.main .table table{
+    width: 95%;
+    margin: 10px 20px 10px 30px;
+    padding: 10px 10px 10px 20px;
+    background-color: #fff;
+    border-radius: 10px ;
+    box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+    border-collapse: collapse;
+}
+.main .table table th{
+    text-align: left;
+    color: #fff;
+    background-color: #000;
+    height: 40px;
+}
+.main .table table th,
+.main .table table td{
+    padding: 10px;
+}
+
+/* advert */
+.main .advert{
+    display: flex;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+    width: 95%;
+    margin: 10px 20px 10px 30px;
+    justify-content: space-between;
+    height: 250px;
+}
+.main .advert .text{
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.main .advert .text h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.main .advert .text p{
+    width: 500px;
+}
+.main .advert .image img{
+    height: 200px;
+    width: 250px;
+}
+.main .advert .text a{
+    text-decoration: none;
+    padding: 15px 50px;
+    background: #fff;
+    color:#af3e4d;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+.main .advert .text a::after,
+.main .advert .text a::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #fff;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+.main .advert .text a:hover{
+    transform: translate(-12px, -12px);
+}
+.main .advert .text a:hover::after{
+    transform: translate(6px, 6px);
+}
+.main .advert .text a:hover::before{
+    transform: translate(12px, 12px);
+}
+
+
+
+/* ========================================
+Media queries 
+===========================================*/
 

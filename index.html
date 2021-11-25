@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>student dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -79,9 +82,9 @@
                      <canvas id="daily" width="400" height="400"></canvas>
                  </div>
 
-                 <h1 class="71">71%</h1>
+                 <h1 class="percentage">71%</h1>
                  <div class="time">
-                     <p>Daily <br> <div>activities</div></p>
+                     <p> <b> Daily</b> <br>activities </p>
                  </div>
              </div>
 
@@ -90,10 +93,10 @@
                      <canvas id="weekly" width="400" height="400"></canvas>
                   </div>
 
-                 <h1 class="20">20%</h1>
+                 <h1 class="percentage">20%</h1>
                  <div class="time">
-                     <p>weekly <br> <div>activities</div></p>
-                 </div>  
+                     <p> <b> Weekly</b> <br>activities</p>
+                 </div>   
              </div>
 
              <div class="glaze">
@@ -101,9 +104,9 @@
                      <canvas id="yearly" width="400" height="400"></canvas>
                  </div>
 
-                 <h1 class="12">12%</h1>
+                 <h1 class="percentage">12%</h1>
                  <div class="time">
-                      <p>yearly <br> <div>activities</div></p>
+                      <p> <b>Yearly</b> <br> activities</p>
                  </div>     
               </div>
          </div>
@@ -111,11 +114,13 @@
          <div class="table">
              <table>
                  <tr>
-                  <th>No</th>
-                  <th>Course Name</th>
-                  <th>Department</th>
-                  <th>Units</th>
-                  <th>GPA</th>
+                  <div class="tablehead">
+                     <th>No</th>
+                     <th>Course Name</th>
+                     <th>Department</th>
+                     <th>Units</th>
+                     <th>GPA</th>
+                  </div>
                  </tr>
                  <tr>
                    <td>0</td>
@@ -182,9 +187,9 @@
 
      <section class="advert">                                              <!--advert-->
          <div class="text">
-             <h1>when nothing goes right,go left</h1>
+             <h1>When nothing goes right,go left</h1>
              <p>Build your skills wth courses and degrees online from anywhere with profesional instructors</p>
-             <button>learn more</button>
+             <a href="#" >Click Me</a>
          </div>
          <div class="image">
             <img src="assets/female image.png" alt="female image">
