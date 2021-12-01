@@ -2,6 +2,7 @@
  ctx = document.getElementById('daily').getContext('2d');
 const daily = new Chart(ctx, {
     type: 'doughnut',
+    cutout:'85%',
     data: {
         datasets: [{
             label: '# of Votes',

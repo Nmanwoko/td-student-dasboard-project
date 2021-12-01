@@ -2,6 +2,7 @@
  ctx = document.getElementById('yearly').getContext('2d');
 const yearly = new Chart(ctx, {
     type: 'doughnut',
+    cutout:'85%',
     data: {
         datasets: [{
             label: '# of Votes',

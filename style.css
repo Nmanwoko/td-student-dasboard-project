@@ -3,7 +3,7 @@
 }
 body{
     margin: 0;
-    background-color: #F4F7F5;
+    background-color: #efefef;
     font-family: 'Rubik', sans-serif;
 }
 /*  =====================================
@@ -14,9 +14,7 @@ body{
     height: 100vh;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
     position: fixed;
-    z-index: 10;
-    /* position: 0, 1049.200, 0, 0 ; */
-    background-color: #fff;
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,12 +23,14 @@ body{
     padding: 20px;
 }
 .navigation .menu ul{
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     padding-inline-start: 15px;
 }
 .navigation .menu ul li{
    padding-top: 5px;
-   color: #fff;
+   color: #f7f7f7;
    background-color: black;
    margin: 6px;
    text-align: center;
@@ -49,7 +49,7 @@ body{
     align-items: center;
  }
  .navigation .upgrade {
-    height: 35vh;
+    height: 30vh;
     width: 90%;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
     padding-left: 25px;
@@ -94,7 +94,7 @@ body{
 /* header section */
 .main .title nav{
     display: flex;
-    background-color: #fff;
+    background-color: #f7f7f7ff;
     justify-content: space-between;
     padding-left: 3%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -113,10 +113,11 @@ body{
 }
 .main .title nav .search input{
     border-radius: 10px;
-    border-color: #F4F7F5; 
+    border-color: #f7f7f7; 
     padding: 10px 20px 5px 10px;
-    background-color: -internal-light-dark(none) #fff;
-    color: -internal-light-dark(none) #fff;
+    background-color: #f7f7f7;
+    border: solid 1px #b2b2b2;
+    color: -internal-light-dark(none) #f7f7f7;
     width: 55%;
     box-shadow: none;
     margin-bottom: 10px;
@@ -132,7 +133,7 @@ body{
 }
 .main .doughnut-box .glaze{
     display: flex;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -160,14 +161,14 @@ body{
     width: 95%;
     margin: 10px 20px 10px 30px;
     padding: 10px 10px 10px 20px;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border-radius: 10px ;
     box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.5);
     border-collapse: collapse;
 }
 .main .table table th{
     text-align: left;
-    color: #fff;
+    color: #f7f7f7;
     background-color: #000;
     height: 40px;
 }
@@ -244,3 +245,135 @@ body{
 Media queries 
 ===========================================*/
 
+@media only screen and (max-width: 600px){
+    
+    /* navigation */
+    section.navigation{
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: fit-content;
+        z-index: 10;
+    }
+    section.navigation .menu ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.navigation .menu ul li{
+        margin: 5px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    section.navigation .upgrade{
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    section.navigation .upgrade button{
+        position: absolute;
+        width: 30%;
+        height: 30%;
+        margin: 15% 0% 0% 60%;
+    }
+    section.navigation .upgrade img{
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        align-self: flex-start;
+    }
+    section.navigation .upgrade p{
+        position: absolute;
+        align-self: top;
+        margin-left: 30%;
+    }
+
+
+    /*===============
+    MAIN 
+    ==================*/
+
+    div.main{
+        width: 100%;
+        z-index: 10;
+        margin-left: 5px;
+    }
+  /* header section */
+    div.main .title nav{
+        display: block;
+    }
+    div.main .title nav h1{
+        width: 100%;
+    }
+    div.main .title nav .search{
+        width: 100%;
+    }
+
+
+  /* statistics */
+    div.main section.statistics .doughnut-box{
+        display: block;
+        width: 100%;
+    }
+    div.main section.statistics .doughnut-box .glaze{
+        width: 95%;
+        margin: 10px;
+    }
+    div.main section.statistics .table table{
+        width: 95%;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+    div.main section.advert{
+        margin: 0;
+        padding: 0;
+        height: 300px;
+        width: 100%;
+    }
+    .main .advert .text {
+        width: 250px;
+    }
+    div.main section.advert .text h1{
+        font-size: 25px;
+    }
+    .main .advert .text p{
+        font-size: 12px;
+        width: 100%;
+    }
+    .main .advert .text a{
+        padding: 10px 30px;
+    }
+    .main .advert .image{
+        width: 150px;
+        height: 250px;
+    }
+
+
+}
+
+@media only screen and (max-width: 900px){
+    section.navigation .logo img{
+        width: 120px;
+    }
+    section.navigation .upgrade{
+        padding-left: 5px;
+    }
+    section.navigation .upgrade img{
+        width: 100px;
+        height: 100px;
+    }
+    section.navigation .upgrade button{
+        width: 100px;
+    }
+
+    .main .doughnut-box{
+        flex-wrap: wrap;
+    }
+    .main .doughnut-box .glaze{
+        width: 45%;
+        margin: 5px;
+    }
+
+}
