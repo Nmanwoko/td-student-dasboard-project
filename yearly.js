@@ -2,7 +2,6 @@
  ctx = document.getElementById('yearly').getContext('2d');
 const yearly = new Chart(ctx, {
     type: 'doughnut',
-    cutout:'85%',
     data: {
         datasets: [{
             label: '# of Votes',
@@ -11,7 +10,8 @@ const yearly = new Chart(ctx, {
                 '#1ea896',
                 '#af3e4d',
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            cutout : '85%'
         }]
     },
 

@@ -2,7 +2,6 @@
  ctx = document.getElementById('weekly').getContext('2d');
 const weekly = new Chart(ctx, {
     type: 'doughnut',
-    cutout:'85%',
     data: {
         datasets: [{
             data: [20, 80],
@@ -10,7 +9,8 @@ const weekly = new Chart(ctx, {
                 '#1ea896',
                 '#af3e4d', 
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            cutout:'85%'
         }]
     },
 });
